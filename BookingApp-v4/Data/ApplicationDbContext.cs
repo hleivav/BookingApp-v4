@@ -8,6 +8,7 @@ namespace BookingApp_v4.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
     {
         public DbSet<GymClass> GymClasses => Set<GymClass>();  
+        public DbSet<ApplicationUserGymClass> ApplicationUserGymClasses => Set<ApplicationUserGymClass>();
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
